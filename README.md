@@ -1,10 +1,7 @@
-# Time Series Modeling and Forecasting of JTUAX Fund Returns (Publication Project)
-
+# Time Series Modeling and Forecasting of JTUAX Fund Returns
 ## Overview
 
 This project presents a full time series analysis and forecasting pipeline applied to the **US Mutual Fund JTUAX**. The entire process was conducted in **R** as part of a research-driven project intended for publication.
-
-All statistical work was independently carried out by me, **Gerasimos Chatzopoulos**, as the lead analyst.
 
 ---
 
@@ -46,9 +43,9 @@ All statistical work was independently carried out by me, **Gerasimos Chatzopoul
   - **Hit Ratio**: 83.3% (percentage of correct sign predictions)
   - **MSFE**: 0.0133 (indicating good fit)
 
----
+## Author
 
-## Tools Used
-
-- **R**: Time series modeling, forecasting, diagnostics
-- **Packages**: `rugarch`, `tseries`, `urca`, `forecast`, `nnfor`
+**Gerasimos Chatzopoulos**  
+MSc in Applied Statistics  
+Athens University of Economics and Business  
+All analysis and reporting were conducted independently as part of academic coursework.
