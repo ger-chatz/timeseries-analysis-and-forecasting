@@ -1,47 +1,53 @@
-# Time Series Modeling and Forecasting of JTUAX Fund Returns
+# Time Series Modeling and Forecasting of JTUAX Fund Returns  
+*MSc Applied Statistics Coursework Project*
+
 ## Overview
 
-This project presents a full time series analysis and forecasting pipeline applied to the **US Mutual Fund JTUAX**. The entire process was conducted in **R** as part of a research-driven project intended for publication.
+This project was completed as part of the MSc in Applied Statistics program and focuses on the time series modeling and forecasting of the **JTUAX US mutual fund returns** using R. The analysis includes model selection, diagnostic testing, and forecast evaluation using both classical and machine learning methods.
+
+The work was conducted independently by **Gerasimos Chatzopoulos** as a full course project, integrating statistical theory and applied forecasting techniques.
 
 ---
 
 ## Objectives
 
-- Construct an appropriate time series from monthly return data
-- Diagnose and resolve potential issues (stationarity, autocorrelation, heteroskedasticity)
-- Fit and compare time series models (AR, GARCH, ARMA-GARCH)
-- Evaluate multiple forecast methods including:
-  - ARMA-GARCH models
-  - GARCH Bootstrap
-  - Neural networks (MLP)
-- Assess predictive performance using metrics like **Mean Squared Forecast Error (MSFE)** and **Hit Ratio**
+- Build and evaluate time series models for monthly JTUAX fund returns
+- Diagnose issues related to stationarity, autocorrelation, and heteroskedasticity
+- Apply ARMA-GARCH and neural network models for forecasting
+- Compare model performance using MSFE and hit ratios
 
 ---
 
 ## Methodology
 
-- **Stationarity Testing**: ADF tests and autocorrelation diagnostics (ACF, PACF, Box test)
-- **Regression Modeling**: Initial multiple linear regression to explore explanatory variables
-- **Residual Diagnostics**: Checked for autocorrelation and heteroskedasticity in residuals
-- **Model Refinement**:
-  - Used ARMA(1,0)-GARCH(1,1) with external regressors
-  - Conducted backward elimination based on AIC/BIC to remove insignificant variables
-- **Forecasting**:
-  - ugarchforecast and ugarchboot (partial bootstrap)
-  - MLP neural network forecasting via `nnfor` package
+- **Preliminary Analysis**: Stationarity testing via ADF; autocorrelation examined using ACF/PACF and Box tests
+- **Model Fitting**:
+  - Linear regression with external variables
+  - Residual diagnostics and GARCH modeling
+  - ARMA(1,0)-GARCH(1,1) chosen as final model
+- **Forecasting Approaches**:
+  - ARMA-GARCH forecasts with `ugarchforecast`
+  - GARCH-based bootstrap using `ugarchboot`
+  - Multilayer perceptron (MLP) neural networks with `nnfor`
 
 ---
 
-## Results
+## Results Summary
 
-- The final chosen model: **ARMA(1,0)-GARCH(1,1)** with selected explanatory variables
-- Residual diagnostics confirmed:
-  - No autocorrelation
-  - Homoscedastic residuals
-  - Approximate normality
-- Forecast evaluation:
-  - **Hit Ratio**: 83.3% (percentage of correct sign predictions)
-  - **MSFE**: 0.0133 (indicating good fit)
+- Residual diagnostics confirmed a well-specified final model
+- **Final model**: ARMA(1,0)-GARCH(1,1) with selected regressors
+- **Forecast evaluation**:
+  - Mean Squared Forecast Error (MSFE): 0.0133
+  - Hit Ratio: 83.3% (correct sign predictions)
+
+---
+
+## Tools
+
+- **R Programming Language**
+- Key libraries: `rugarch`, `tseries`, `forecast`, `urca`, `nnfor`
+
+---
 
 ## Author
 
@@ -49,3 +55,5 @@ This project presents a full time series analysis and forecasting pipeline appli
 MSc in Applied Statistics  
 Athens University of Economics and Business  
 All analysis and reporting were conducted independently as part of academic coursework.
+
+---
